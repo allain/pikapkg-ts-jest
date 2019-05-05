@@ -1,0 +1,37 @@
+{
+  "name": "pikapkg-ts-jest",
+  "version": "0.1.0",
+  "description": "Project setup to use pikapkg, typescript, jest, and handles esm modules",
+  "main": "index.js",
+  "scripts": {
+    "build": "pack build",
+    "test": "jest --config jest.config.js"
+  },
+  "keywords": [],
+  "author": "Allain Lalonde <allain.lalonde@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/types": "^7.4.4",
+    "@pika/pack": "^0.3.7",
+    "@pika/plugin-build-node": "^0.3.15",
+    "@pika/plugin-build-web": "^0.3.15",
+    "@pika/plugin-ts-standard-pkg": "^0.3.15",
+    "@types/jest": "^24.0.12",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.5"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
+    ]
+  }
+}
